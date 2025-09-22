@@ -12,17 +12,17 @@ impl Rectangle {
 
         fn area(&self) -> f64 {
         // TODO: implement
-            self.width *self.height;
+            return self.width *self.height;
         }
 
         fn perimeter(&self) -> f64 {
         // TODO: implement
-            2.0 * (self.width + self.height);
+            return 2.0 * (self.width + self.height);
         }
 
         fn is_square(&self) -> bool {
         // TODO: implement
-            if self.width = self.height {
+            if self.width == self.height {
                 true
             } else {
                 false
