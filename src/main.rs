@@ -1,10 +1,13 @@
 
 use std::env;
+use std::io;
+use rand::Rng;
+use std::fs;
 
 fn main() {
     println!("Hello, world!");
 
-    // Challenge: Guess the number game 
+    // Challenge: Guess the number game
     let mut rng = rand::thread_rng();
     let number: i32 = rng.gen_range(1..=100); // inclusive 1..=100
 
@@ -46,6 +49,13 @@ fn main() {
 
     println!("{} did NOT walk on the Moon... YET!", search_name);
 
+
+    let mut rect = Rectangle::new(3.0, 4.0);
+    println!("Area: {}", rect.get_area());
+
+    rect.scale(2.0);
+    println!("Scaled area: {}", rect.get_area());
+}
     //Challenge: Represent SHapes
     struct Rectangle {
     width: f64,
@@ -67,12 +77,6 @@ impl Rectangle {
     }
 }
 
-fn main() {
-    let mut rect = Rectangle::new(3.0, 4.0);
-    println!("Area: {}", rect.get_area());
 
-    rect.scale(2.0);
-    println!("Scaled area: {}", rect.get_area());
-}
 
-}
+
